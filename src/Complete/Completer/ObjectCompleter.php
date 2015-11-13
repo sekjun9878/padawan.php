@@ -64,7 +64,7 @@ class ObjectCompleter
     protected function createEntryForMethod(MethodData $method)
     {
         return new Entry(
-            $method->name,
+            $method->name."(",
             $method->getSignature(),
             sprintf("%s\n%s\n", $method->getSignature(), $method->doc)
         );
